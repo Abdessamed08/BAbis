@@ -1,0 +1,2650 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>بنك الجزائر المركزي — الصفحة الرئيسية</title>
+  <meta name="description" content="البنك المركزي للجزائر - السياسة النقدية، معدلات الصرف، الاحتياطيات، والخدمات المصرفية. تصميم واجهة عصرية ومتجاوبة." />
+  <meta name="keywords" content="بنك الجزائر, البنك المركزي, الدينار الجزائري, معدل الصرف, السياسة النقدية" />
+  <meta name="author" content="بنك الجزائر المركزي" />
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="بنك الجزائر المركزي — الصفحة الرئيسية" />
+  <meta property="og:description" content="البنك المركزي للجزائر - ثبات نقدي ونمو اقتصادي مستدام" />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Bank+of+Algeria" />
+  <meta property="og:locale" content="ar_DZ" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="بنك الجزائر المركزي" />
+  <meta name="twitter:description" content="البنك المركزي للجزائر - ثبات نقدي ونمو اقتصادي مستدام" />
+  
+  <!-- Preload critical resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" as="style">
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#fcfcfc;
+      --card:#ffffff;
+      --accent:#9d8b5e;
+      --accent-dark:#7a6b46;
+      --primary:#1a2b4b;
+      --primary-light:#2c4066;
+      --muted:#596575;
+      --text:#1a2b4b;
+      --border: #e0e0e0;
+      --radius:4px;
+      --transition-speed: 0.2s;
+      --header-height: 80px;
+    }
+    
+    *{box-sizing:border-box}
+    
+    html{
+      scroll-behavior: smooth;
+    }
+    
+    html,body{height:100%}
+    
+    body{
+      margin:0;
+      font-family: "Segoe UI", "Tahoma", "Geneva", "Verdana", sans-serif;
+      background: var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:0;
+      position: relative;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    
+    /* Background Pattern - Subtle & Official */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(var(--accent) 0.5px, transparent 0.5px);
+      background-size: 20px 20px;
+      opacity: 0.15;
+      z-index: -1;
+    }
+
+    /* Skip link for accessibility */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--accent);
+      color: #fff;
+      padding: 8px 16px;
+      text-decoration: none;
+      border-radius: 0 0 8px 0;
+      z-index: 100;
+      font-weight: 600;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:0 auto;
+      padding:24px;
+      animation: fadeIn 0.6s ease-out;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Header - Solid & Corporate */
+    header{
+      display:flex;
+      gap:16px;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:20px;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      background: #ffffff;
+      z-index: 50;
+      transition: all var(--transition-speed) ease;
+      border-bottom: 3px solid var(--accent);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    
+    header.scrolled {
+      padding: 10px 0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    /* Info bar under header */
+    .info-bar{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+      gap:10px;
+      background: var(--card);
+      border:1px solid var(--glass);
+      border-radius:10px;
+      padding:10px 14px;
+      box-shadow: 0 4px 12px rgba(0,19,69,0.08);
+      margin-bottom:14px;
+    }
+    .info-pill{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      color:var(--primary);
+      font-weight:700;
+    }
+    .info-pill small{color:var(--muted);font-weight:600}
+    
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      animation: slideInRight 0.6s ease-out;
+    }
+    
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    
+    .logo{
+      width:110px;
+      height:110px;
+      border-radius: 50%; /* Forme circulaire plus institutionnelle */
+      background: #ffffff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      border: 1px solid #eee;
+      position: relative;
+      overflow: hidden;
+      padding: 10px;
+      flex-shrink: 0;
+    }
+    
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    
+    /* Suppression des effets animés superflus pour un rendu plus net */
+    .logo:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+    
+    /* Mobile menu button */
+    .mobile-menu-btn {
+      display: none;
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      font-size: 24px;
+      cursor: pointer;
+      padding: 8px;
+      transition: color var(--transition-speed) ease;
+    }
+    
+    .mobile-menu-btn:hover,
+    .mobile-menu-btn:focus {
+      color: #fff;
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+    
+    nav{
+      animation: slideInLeft 0.6s ease-out;
+    }
+    
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    
+    nav a{
+      color:var(--muted);
+      text-decoration:none;
+      margin-left:18px;
+      font-weight:600;
+      transition: all var(--transition-speed) ease;
+      position: relative;
+      padding: 6px 0;
+    }
+    
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width var(--transition-speed) ease;
+    }
+    
+    nav a:hover,
+    nav a:focus {
+      color:var(--primary);
+      outline: none;
+    }
+    
+    nav a:hover::after,
+    nav a:focus::after {
+      width: 100%;
+    }
+    
+    nav a.active {
+      color: var(--accent);
+    }
+    
+    nav a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+
+    /* --- PROFESSIONAL HERO SLIDER --- */
+    .hero {
+      position: relative;
+      border-radius: var(--radius);
+      padding: 0; /* Reset padding pour que le slider remplisse tout */
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 0; /* Gap géré par le padding interne */
+      align-items: stretch; /* Hauteur pleine */
+      margin-bottom: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      background: var(--primary); /* Fond de sécurité */
+      border: 1px solid rgba(255,255,255,0.1);
+      min-height: 420px;
+      touch-action: pan-y;
+    }
+
+    /* Conteneur du contenu (Texte + Stats) pour les placer au dessus du slider */
+    .hero-content-wrapper {
+      position: relative;
+      z-index: 10;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      /* Fond allégé pour laisser voir les photos */
+      background: linear-gradient(180deg, rgba(0,0,0,0.26) 0%, rgba(0,0,0,0.1) 55%, rgba(0,0,0,0) 100%);
+    }
+
+    .hero-slider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      touch-action: pan-y;
+    }
+
+    /* Texture désactivée pour plus de netteté */
+    .hero-slider::after {
+      display: none;
+    }
+
+    .hero-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover; /* Remplit sans bandes, priorité à la netteté */
+      background-position: center center;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transform: none;
+      transition: opacity 0.8s ease-in-out;
+      image-rendering: -webkit-optimize-contrast;
+    }
+
+    .hero-slide.active {
+      opacity: 1;
+    }
+
+    /* Sidebar à droite (Taux de change) */
+    .hero aside.card {
+      position: relative;
+      z-index: 10;
+      margin: 20px;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border: none;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Styles spécifiques pour le texte dans le Hero */
+    .hero h1 {
+      font-size: 36px;
+      font-weight: 800;
+      margin-bottom: 12px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      background: linear-gradient(90deg, #fff, #d4c5a0);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.9);
+      max-width: 500px;
+      margin-bottom: 30px;
+      line-height: 1.7;
+    }
+
+    /* Controls + dots + progress */
+    .hero-controls {
+      position: absolute;
+      bottom: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      z-index: 15;
+      padding: 6px 10px;
+      background: rgba(0,0,0,0.2);
+      border-radius: 999px;
+      backdrop-filter: blur(6px);
+    }
+
+    .hero-nav {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.4);
+      background: rgba(0,0,0,0.35);
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .hero-nav:hover,
+    .hero-nav:focus-visible {
+      background: rgba(255,255,255,0.15);
+      border-color: rgba(255,255,255,0.7);
+    }
+
+    .hero-dots {
+      display: flex;
+      gap: 8px;
+    }
+
+    .hero-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.7);
+      background: rgba(255,255,255,0.25);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      padding: 0;
+    }
+    .hero-dot.active {
+      background: #d4c5a0;
+      border-color: #d4c5a0;
+      width: 22px;
+      border-radius: 999px;
+    }
+    .hero-dot:hover,
+    .hero-dot:focus-visible {
+      background: rgba(255,255,255,0.55);
+    }
+
+    .hero-progress {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      height: 3px;
+      background: rgba(255,255,255,0.18);
+      border-radius: 999px;
+      overflow: hidden;
+      z-index: 14;
+    }
+    .hero-progress span {
+      display: block;
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(90deg, #d4c5a0, #fff);
+      transition: width linear;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.2); opacity: 0.8; }
+    }
+    
+    .hero h1{
+      margin:0 0 8px 0;
+      font-size:28px;
+      letter-spacing:0.2px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .hero p{
+      margin:0;
+      color:rgba(255,255,255,0.9);
+      line-height:1.5;
+      position: relative;
+      z-index: 1;
+    }
+    
+    /* Card Style - Clean & Official */
+    .card, .kpi-card, .chart-card, .service, .cta-card, .news-item, .timeline-card, .pair, .partner {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      transition: all var(--transition-speed) ease;
+    }
+
+    .kpi-card:hover, .chart-card:hover, .service:hover, .cta-card:hover, .news-item:hover, .pair:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .kpi-card .label{color:var(--muted);font-size:13px;margin-bottom:6px}
+    .kpi-card .value{font-weight:800;color:var(--primary);font-size:18px}
+    .kpi-bar{
+      margin-top:8px;
+      width:100%;
+      height:6px;
+      border-radius:8px;
+      background: var(--glass-2);
+      overflow:hidden;
+    }
+    .kpi-bar span{
+      display:block;
+      height:100%;
+      background: linear-gradient(90deg,var(--accent),var(--accent-dark));
+      border-radius:8px;
+      width:0;
+      transition: width 0.8s ease;
+    }
+
+    /* Charts */
+    .charts-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap:12px;
+      margin:14px 0 8px 0;
+    }
+    .chart-card{
+      background:#ffffff;
+      border:2px solid var(--glass);
+      border-radius:12px;
+      padding:12px;
+      box-shadow: 0 4px 12px rgba(0,19,69,0.06);
+      transition: all var(--transition-speed) ease;
+    }
+    .chart-card:hover{
+      border-color: var(--accent);
+      box-shadow: 0 12px 28px rgba(135,117,77,0.16);
+      transform: translateY(-3px);
+    }
+    .chart-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:8px;
+      color:var(--primary);
+    }
+    .chart-header small{color:var(--muted)}
+    .chart-legend{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      margin-top:6px;
+      font-size:12px;
+      color:var(--muted);
+      flex-wrap:wrap;
+    }
+    .legend-item{
+      display:flex;
+      align-items:center;
+      gap:6px;
+    }
+    .legend-dot{
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      display:inline-block;
+    }
+    .chart-canvas{
+      width:100%;
+      height:180px;
+    }
+
+    /* Stats with animation */
+    .stats{
+      display:flex;
+      gap:12px;
+      margin-top:16px;
+      flex-wrap:wrap;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .stat{
+      background:#ffffff;
+      padding:14px;
+      border-radius:12px;
+      min-width:120px;
+      text-align:center;
+      box-shadow: 0 6px 26px rgba(0,19,69,0.15);
+      border:2px solid var(--accent);
+      transition: all var(--transition-speed) ease;
+      animation: fadeInScale 0.6s ease-out backwards;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .stat:nth-child(1) { animation-delay: 0.3s; }
+    .stat:nth-child(2) { animation-delay: 0.4s; }
+    .stat:nth-child(3) { animation-delay: 0.5s; }
+    
+    @keyframes fadeInScale {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    
+    .stat::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(135,117,77,0.15), transparent);
+      transition: left 0.6s ease;
+    }
+    
+    .stat:hover::before {
+      left: 100%;
+    }
+    
+    .stat:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 12px 32px rgba(135,117,77,0.3);
+      border-color: var(--accent);
+      background: linear-gradient(135deg, #ffffff, #faf9f7);
+    }
+    
+    .stat .n{
+      font-size:18px;
+      font-weight:700;
+      margin-bottom:6px;
+      color: var(--primary);
+    }
+    
+    .stat .l{
+      font-size:12px;
+      color:var(--muted);
+    }
+
+    /* Card with glassmorphism */
+    .card{
+      background:#ffffff;
+      border-radius:12px;
+      padding:12px;
+      border:2px solid var(--glass);
+      box-shadow: 0 4px 12px rgba(0,19,69,0.08);
+      transition: all var(--transition-speed) ease;
+      position: relative;
+    }
+    
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 12px;
+      padding: 1px;
+      background: linear-gradient(135deg, var(--accent), transparent);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: opacity var(--transition-speed) ease;
+    }
+    
+    .card:hover::before {
+      opacity: 1;
+    }
+    
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(135,117,77,0.2);
+      border-color: var(--accent);
+    }
+
+    main{
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:18px;
+      animation: fadeIn 0.8s ease-out 0.4s backwards;
+    }
+
+    /* Services grid */
+    .services{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap:12px;
+    }
+    
+    .service{
+      background:#ffffff;
+      padding:14px;
+      border-radius:12px;
+      border:2px solid var(--glass);
+      min-height:86px;
+      transition: all var(--transition-speed) ease;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,19,69,0.06);
+    }
+    
+    .service::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform var(--transition-speed) ease;
+    }
+    
+    .service:hover::after {
+      transform: scaleX(1);
+    }
+    
+    .service:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+      box-shadow: 0 12px 32px rgba(135,117,77,0.2);
+      background: linear-gradient(135deg, rgba(135,117,77,0.05), #ffffff);
+    }
+    
+    .service h3{
+      margin:0 0 8px 0;
+      font-size:16px;
+      transition: color var(--transition-speed) ease;
+    }
+    
+    .service:hover h3 {
+      color: var(--primary);
+    }
+    
+    .service p{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* News items with carousel */
+    .news-container {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .news-items {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .news-item{
+      display:flex;
+      gap:12px;
+      padding:10px 8px;
+      border-radius:10px;
+      align-items:flex-start;
+      border:2px solid var(--glass);
+      background: #ffffff;
+      margin-bottom:10px;
+      transition: all var(--transition-speed) ease;
+      cursor: pointer;
+      min-width: 100%;
+      box-shadow: 0 2px 8px rgba(0,19,69,0.05);
+    }
+    
+    .news-item:hover {
+      border-color: var(--accent);
+      background: linear-gradient(135deg, rgba(135,117,77,0.05), #ffffff);
+      transform: translateX(4px);
+      box-shadow: 0 4px 16px rgba(135,117,77,0.15);
+    }
+    
+    .news-item img{
+      width:70px;
+      height:56px;
+      border-radius:8px;
+      object-fit:cover;
+      transition: transform var(--transition-speed) ease;
+    }
+    
+    .news-item:hover img {
+      transform: scale(1.1);
+    }
+    
+    .news-item h4{
+      margin:0;
+      font-size:14px;
+      transition: color var(--transition-speed) ease;
+    }
+    
+    .news-item:hover h4 {
+      color: var(--primary);
+    }
+    
+    .news-item p{
+      margin:6px 0 0 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* Ticker */
+    .ticker{
+      overflow:hidden;
+      border:2px solid var(--accent);
+      border-radius:12px;
+      background: var(--card);
+      box-shadow: 0 4px 12px rgba(0,19,69,0.08);
+      margin: 12px 0 18px 0;
+      position: relative;
+      -webkit-overflow-scrolling: touch;
+    }
+    .ticker-track{
+      display:flex;
+      gap:24px;
+      padding:12px 16px;
+      animation: tickerMove 24s linear infinite;
+      white-space: nowrap;
+    }
+    .ticker-item{
+      display:flex;
+      gap:8px;
+      align-items:center;
+      font-weight:700;
+      color:var(--primary);
+    }
+    .ticker-item span{
+      color:var(--accent);
+      font-weight:800;
+    }
+    @keyframes tickerMove {
+      0%{transform: translateX(0);}
+      100%{transform: translateX(-50%);}
+    }
+
+    /* CTA grid */
+    .cta-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap:12px;
+      margin-top:14px;
+    }
+    .cta-card{
+      background:#ffffff;
+      border:2px solid var(--glass);
+      border-radius:12px;
+      padding:14px;
+      box-shadow: 0 4px 14px rgba(0,19,69,0.08);
+      transition: all var(--transition-speed) ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-card:hover{
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(135,117,77,0.18);
+    }
+    .cta-card h3{margin:0 0 6px 0;color:var(--primary)}
+    .cta-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.5}
+    .pill-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      background: rgba(135,117,77,0.12);
+      color: var(--primary);
+      padding:6px 10px;
+      border-radius: 999px;
+      font-weight:700;
+      font-size:12px;
+      margin-bottom:8px;
+    }
+
+    /* Timeline */
+    .timeline{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      margin-top:10px;
+    }
+    .timeline-item{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+    }
+    .timeline-bullet{
+      width:12px;
+      height:12px;
+      border-radius:50%;
+      background: var(--accent);
+      margin-top:6px;
+      box-shadow: 0 0 0 4px rgba(135,117,77,0.2);
+    }
+    .timeline-card{
+      background:#ffffff;
+      border:2px solid var(--glass);
+      border-radius:10px;
+      padding:10px 12px;
+      box-shadow: 0 4px 12px rgba(0,19,69,0.06);
+    }
+    .timeline-card h4{margin:0;color:var(--primary)}
+    .timeline-card small{color:var(--muted);font-weight:600}
+    .timeline-card p{margin:6px 0 0 0;color:var(--muted);line-height:1.5}
+
+    /* Partners */
+    .partners{
+      display:grid;
+      grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+      gap:10px;
+      margin-top:12px;
+    }
+    .partner{
+      background:#ffffff;
+      border:2px solid var(--glass);
+      border-radius:10px;
+      padding:12px;
+      text-align:center;
+      box-shadow: 0 3px 10px rgba(0,19,69,0.05);
+      transition: all var(--transition-speed) ease;
+      font-weight:700;
+      color:var(--primary);
+    }
+    .partner:hover{
+      border-color: var(--accent);
+      box-shadow: 0 10px 24px rgba(135,117,77,0.18);
+      transform: translateY(-2px);
+    }
+    
+    .carousel-controls {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 12px;
+    }
+    
+    .carousel-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--glass);
+      border: none;
+      cursor: pointer;
+      transition: all var(--transition-speed) ease;
+      padding: 0;
+    }
+    
+    .carousel-dot.active {
+      background: var(--accent);
+      width: 24px;
+      border-radius: 4px;
+    }
+    
+    .carousel-dot:hover,
+    .carousel-dot:focus {
+      background: var(--accent);
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    /* Sidebar widgets */
+    aside .widget{
+      margin-bottom:14px;
+    }
+    
+    .exchange{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    
+    .pair{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:10px;
+      border-radius:10px;
+      background:var(--card);
+      border:1px solid var(--glass);
+      transition: all var(--transition-speed) ease;
+    }
+    
+    .pair:hover {
+      border-color: var(--accent);
+      background: linear-gradient(90deg, rgba(135,117,77,0.08), var(--card));
+      transform: translateX(4px);
+    }
+    
+    .pair .sym{
+      font-weight:700;
+    }
+    
+    .pair .val{
+      font-family:monospace;
+      transition: color var(--transition-speed) ease;
+    }
+    
+    .pair:hover .val {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* Buttons with ripple effect */
+    button, .btn{
+      position: relative;
+      overflow: hidden;
+      transition: all var(--transition-speed) ease;
+      cursor: pointer;
+    }
+    
+    button:focus,
+    .btn:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    
+    button:hover,
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(135,117,77,0.3);
+    }
+    
+    button:active,
+    .btn:active {
+      transform: translateY(0);
+    }
+    
+    .btn-primary {
+      flex:1;
+      padding:10px;
+      border-radius:10px;
+      border:none;
+      background:var(--accent);
+      color:#ffffff;
+      font-weight:700;
+      cursor:pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s ease, height 0.6s ease;
+    }
+    
+    .btn-primary:hover::before {
+      width: 300px;
+      height: 300px;
+    }
+    
+    .btn-primary:hover {
+      animation: pulseBtn 1.5s ease-in-out infinite;
+      background: var(--accent-dark);
+    }
+    
+    @keyframes pulseBtn {
+      0%, 100% { box-shadow: 0 4px 12px rgba(135,117,77,0.3); }
+      50% { box-shadow: 0 4px 20px rgba(135,117,77,0.6); }
+    }
+    
+    .btn-secondary {
+      flex:1;
+      padding:10px;
+      border-radius:10px;
+      border:2px solid var(--glass);
+      background:transparent;
+      color:var(--muted);
+      cursor:pointer;
+      transition: all var(--transition-speed) ease;
+    }
+    
+    .btn-secondary:hover {
+      background: var(--card);
+      color: var(--primary);
+      border-color: var(--accent);
+    }
+
+    /* Input fields */
+    input[type="search"] {
+      flex:1;
+      padding:10px;
+      border-radius:10px;
+      border:2px solid var(--glass);
+      background:var(--card);
+      color:var(--text);
+      transition: all var(--transition-speed) ease;
+    }
+    
+    input[type="search"]:focus {
+      outline: none;
+      border-color: var(--accent);
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(135,117,77,0.1);
+    }
+    
+    input[type="search"]::placeholder {
+      color: var(--muted);
+    }
+
+    /* Footer - Official Style */
+    footer{
+      margin-top:40px;
+      text-align:center;
+      color: #ffffff;
+      background: var(--primary);
+      padding: 24px;
+      border-top: 4px solid var(--accent);
+      font-size:14px;
+    }
+    footer div:last-child {
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* Toast notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      color: #fff;
+      padding: 16px 24px;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+      z-index: 1000;
+      transition: transform 0.4s ease;
+      font-weight: 600;
+      backdrop-filter: blur(12px);
+    }
+    
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,19,69,0.8);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 0.3s ease;
+    }
+    
+    .modal-overlay.show {
+      display: flex;
+    }
+    
+    .modal {
+      background: #ffffff;
+      border-radius: var(--radius);
+      padding: 24px;
+      max-width: 600px;
+      width: 90%;
+      border: 3px solid var(--accent);
+      box-shadow: 0 16px 48px rgba(0,19,69,0.4);
+      animation: slideUp 0.4s ease;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+    
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    
+    .modal-close {
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      font-size: 24px;
+      cursor: pointer;
+      padding: 4px 8px;
+      line-height: 1;
+    }
+    
+    .modal-close:hover {
+      color: var(--primary);
+    }
+
+    /* Loading spinner */
+    .spinner {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 2px solid rgba(135,117,77,0.3);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Responsive design */
+    @media (max-width:920px){
+      .hero{
+        grid-template-columns:1fr;
+        min-height: 380px;
+      }
+      .hero-content-wrapper{
+        padding: 24px;
+        background: linear-gradient(90deg, rgba(26,43,75,0.9) 0%, rgba(26,43,75,0.6) 60%, rgba(26,43,75,0) 100%);
+        align-items: flex-start;
+      }
+      .hero aside.card{
+        margin: 16px;
+      }
+      .hero-controls{
+        bottom: 12px;
+        gap: 10px;
+        padding: 6px 10px;
+      }
+      .hero-nav{
+        width: 34px;
+        height: 34px;
+        font-size: 16px;
+      }
+      .hero-dot{
+        width: 9px;
+        height: 9px;
+      }
+      .hero-progress{
+        width: 190px;
+        bottom: 8px;
+      }
+      nav {
+        width: 240px;
+      }
+      main{
+        grid-template-columns:1fr;
+      }
+      
+      .logo{
+        width:70px;
+        height:70px;
+      }
+      
+      nav {
+        position: fixed;
+        top: var(--header-height);
+        right: -100%;
+        width: 280px;
+        height: calc(100vh - var(--header-height));
+        background: rgba(255,255,255,0.98);
+        backdrop-filter: blur(12px);
+        padding: 24px;
+        transition: right 0.4s ease;
+        border-left: 3px solid var(--accent);
+        z-index: 40;
+        box-shadow: -4px 0 12px rgba(0,19,69,0.1);
+      }
+      
+      nav.open {
+        right: 0;
+      }
+      
+      nav a {
+        display: block;
+        margin: 0 0 16px 0;
+        padding: 12px;
+        border-radius: 8px;
+        transition: all var(--transition-speed) ease;
+      }
+      
+      nav a:hover,
+      nav a:focus {
+        background: var(--glass);
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .stats {
+        justify-content: center;
+      }
+
+      /* Barres info et ticker en défilement horizontal léger */
+      .info-bar,
+      .ticker-track{
+        overflow-x: auto;
+        scrollbar-width: thin;
+        -ms-overflow-style: none;
+      }
+      .ticker-track::-webkit-scrollbar,
+      .info-bar::-webkit-scrollbar{
+        height: 4px;
+      }
+    }
+    
+    @media (max-width:640px){
+      /* === TYPOGRAPHIE MOBILE === */
+      body {
+        font-size: 15px;
+        line-height: 1.6;
+      }
+      
+      h2 {
+        font-size: 20px;
+        margin-bottom: 14px;
+      }
+      
+      h3 {
+        font-size: 17px;
+      }
+      
+      /* === LAYOUT === */
+      .container {
+        padding: 12px;
+      }
+      
+      /* === HERO SLIDER MOBILE PREMIUM === */
+      .hero {
+        min-height: 450px;
+        border-radius: 0;
+        margin-bottom: 16px;
+      }
+      
+      .hero-content-wrapper{
+        padding: 20px 16px;
+        text-align: center;
+        align-items: center;
+        justify-content: flex-end;
+        background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.75) 100%);
+      }
+      
+      .hero h1 {
+        font-size: 26px;
+        line-height: 1.3;
+        margin-bottom: 10px;
+        text-shadow: 0 3px 12px rgba(0,0,0,0.8);
+      }
+      
+      .hero p {
+        font-size: 15px;
+        line-height: 1.6;
+        max-width: 100%;
+        margin-bottom: 20px;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+      }
+      
+      /* Images en pleine largeur sur mobile */
+      .hero-slide{
+        background-size: cover;
+        background-position: center;
+      }
+      
+      /* Contrôles du slider optimisés tactiles */
+      .hero-controls{
+        bottom: 16px;
+        gap: 12px;
+        padding: 8px 12px;
+        background: rgba(0,0,0,0.5);
+      }
+      .hero-nav{
+        width: 44px; /* Touch target optimal */
+        height: 44px;
+        font-size: 18px;
+        border: 2px solid rgba(255,255,255,0.6);
+      }
+      .hero-dots .hero-dot{
+        width: 10px;
+        height: 10px;
+        border-width: 2px;
+      }
+      .hero-dot.active {
+        width: 28px;
+        border-radius: 6px;
+      }
+      .hero-progress{
+        width: 180px;
+        height: 4px;
+        bottom: 6px;
+      }
+      
+      /* === HEADER MOBILE === */
+      header {
+        padding: 12px 0;
+      }
+      
+      .logo {
+        width: 60px;
+        height: 60px;
+      }
+      
+      .brand > div:first-of-type {
+        font-size: 16px !important;
+      }
+      
+      .brand > div:last-of-type {
+        font-size: 12px !important;
+      }
+      
+      /* Hamburger menu touch-friendly */
+      .mobile-menu-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 26px;
+      }
+      
+      /* === INFO BAR === */
+      .info-bar {
+        padding: 10px 12px;
+        gap: 8px;
+        border-radius: 8px;
+      }
+      
+      .info-pill {
+        font-size: 13px;
+        white-space: nowrap;
+      }
+      
+      /* === STATS MOBILE === */
+      .stats {
+        flex-direction: row;
+        gap: 8px;
+        margin-top: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      
+      .stat {
+        min-width: 105px;
+        padding: 12px 10px;
+        border-radius: 10px;
+      }
+      
+      .stat .n {
+        font-size: 17px;
+      }
+      
+      .stat .l {
+        font-size: 11px;
+      }
+      
+      /* === ASIDE CARD (Taux de change) === */
+      .hero aside.card {
+        margin: 12px;
+        padding: 14px;
+      }
+      
+      .exchange {
+        gap: 10px;
+      }
+      
+      .pair {
+        padding: 12px;
+        border-radius: 8px;
+      }
+      
+      /* === SERVICES === */
+      .services {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      
+      .service {
+        padding: 16px;
+        min-height: auto;
+      }
+      
+      .service h3 {
+        font-size: 16px;
+      }
+      
+      .service p {
+        font-size: 14px;
+      }
+      
+      /* === KPI & CHARTS - SCROLL HORIZONTAL OPTIMISÉ === */
+      .kpi-grid{
+        display: flex;
+        overflow-x: auto;
+        gap: 12px;
+        padding-bottom: 12px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+      }
+      .kpi-card{
+        min-width: 240px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        padding: 14px;
+      }
+
+      .charts-grid{
+        display: flex;
+        overflow-x: auto;
+        gap: 12px;
+        padding-bottom: 12px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+      }
+      .chart-card{
+        min-width: 280px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        padding: 14px;
+      }
+      
+      /* === CTA CARDS === */
+      .cta-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      
+      .cta-card {
+        padding: 16px;
+      }
+      
+      .cta-card h3 {
+        font-size: 16px;
+      }
+      
+      /* === NEWS CAROUSEL === */
+      .news-item {
+        padding: 12px;
+        gap: 10px;
+      }
+      
+      .news-item img {
+        width: 80px;
+        height: 60px;
+      }
+      
+      .news-item h4 {
+        font-size: 15px;
+      }
+      
+      .news-item p {
+        font-size: 13px;
+      }
+      
+      /* === TIMELINE === */
+      .timeline {
+        gap: 14px;
+      }
+      
+      .timeline-card {
+        padding: 12px;
+      }
+      
+      .timeline-card h4 {
+        font-size: 15px;
+      }
+      
+      .timeline-card p {
+        font-size: 13px;
+      }
+      
+      /* === PARTNERS === */
+      .partners {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+      }
+      
+      .partner {
+        padding: 14px 10px;
+        font-size: 13px;
+      }
+      
+      /* === SIDEBAR === */
+      aside .widget {
+        margin-bottom: 12px;
+      }
+      
+      /* Search input touch-friendly */
+      input[type="search"] {
+        font-size: 16px; /* Évite le zoom automatique iOS */
+        padding: 12px;
+      }
+      
+      /* Buttons touch-friendly */
+      .btn-primary,
+      .btn-secondary {
+        padding: 12px;
+        font-size: 15px;
+        min-height: 44px;
+      }
+      
+      /* === TICKER === */
+      .ticker {
+        margin: 10px 0 16px 0;
+        border-radius: 8px;
+      }
+      
+      .ticker-track{
+        padding: 10px 14px;
+        animation-duration: 20s;
+        font-size: 13px;
+      }
+      
+      .ticker-item {
+        gap: 6px;
+      }
+      
+      /* === FOOTER === */
+      footer {
+        padding: 20px 16px;
+        font-size: 13px;
+        margin-top: 30px;
+      }
+      
+      /* === MODAL MOBILE === */
+      .modal {
+        width: 95%;
+        padding: 20px;
+        max-height: 85vh;
+      }
+      
+      /* === TOAST === */
+      .toast {
+        bottom: 16px;
+        padding: 14px 20px;
+        font-size: 14px;
+        max-width: 90%;
+      }
+      
+      /* === SMOOTH SCROLLING === */
+      * {
+        -webkit-tap-highlight-color: rgba(157, 139, 94, 0.2);
+      }
+      
+      /* Optimisation des scrolls horizontaux */
+      .kpi-grid::-webkit-scrollbar,
+      .charts-grid::-webkit-scrollbar {
+        height: 6px;
+      }
+      
+      .kpi-grid::-webkit-scrollbar-track,
+      .charts-grid::-webkit-scrollbar-track {
+        background: rgba(0,0,0,0.05);
+        border-radius: 10px;
+      }
+      
+      .kpi-grid::-webkit-scrollbar-thumb,
+      .charts-grid::-webkit-scrollbar-thumb {
+        background: var(--accent);
+        border-radius: 10px;
+      }
+    }
+
+    /* Accessibility improvements */
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+    
+    /* Focus visible styles */
+    *:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+    
+    /* Reduce motion for accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "GovernmentOrganization",
+    "name": "بنك الجزائر المركزي",
+    "alternateName": "Bank of Algeria",
+    "url": "https://www.bank-of-algeria.dz",
+    "logo": "https://via.placeholder.com/200x200.png?text=BCA",
+    "description": "البنك المركزي للجزائر - ثبات نقدي ونمو اقتصادي مستدام",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "الجزائر العاصمة",
+      "addressCountry": "DZ"
+    },
+    "telephone": "+213 21 000 000",
+    "sameAs": [
+      "https://www.facebook.com/BankOfAlgeria",
+      "https://twitter.com/BankOfAlgeria"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Skip to main content link -->
+  <a href="#main-content" class="skip-link">انتقل إلى المحتوى الرئيسي</a>
+
+  <div class="container">
+    <header role="banner">
+      <div class="brand">
+        <div class="logo" aria-label="شعار بنك الجزائر المركزي">
+          <img src="images/bank.webp" alt="شعار بنك الجزائر المركزي" />
+        </div>
+        <div>
+          <div style="font-weight:800;font-size:20px;line-height:1.3">بنك الجزائر المركزي</div>
+          <div style="color:var(--muted);font-size:14px;margin-top:4px">واجهة معلوماتية رسمية</div>
+        </div>
+      </div>
+
+      <button class="mobile-menu-btn" aria-label="فتح القائمة" aria-expanded="false" onclick="toggleMenu()">
+        ☰
+      </button>
+
+      <nav aria-label="القائمة الرئيسية" id="mainNav">
+        <a href="#" class="active" aria-current="page">الرئيسية</a>
+        <a href="#about">عن البنك</a>
+        <a href="#policy">السياسة النقدية</a>
+        <a href="#stats">الإحصاءات</a>
+        <a href="#fx">سوق الصرف</a>
+        <a href="#publications">النشرات</a>
+        <a href="#currency">العملات والأوراق</a>
+        <a href="#media">الإعلام والفعاليات</a>
+        <a href="#contact">تواصل</a>
+      </nav>
+    </header>
+
+    <div class="info-bar" aria-label="معلومات سريعة">
+      <div class="info-pill">تحديث أخير <small>قبل دقائق</small></div>
+      <div class="info-pill">مجلس النقد <small>اجتماع الخميس</small></div>
+      <div class="info-pill">سوق الصرف <small>مستقر اليوم</small></div>
+      <div class="info-pill">الاستقرار المالي <small>مؤشرات مطمئنة</small></div>
+    </div>
+
+    <section class="hero" role="region" aria-labelledby="hero-title">
+      <div class="hero-slider">
+        <div class="hero-slide active" style="background-image: url('images/BA1.webp')"></div>
+        <div class="hero-slide" style="background-image: url('images/BA2.webp')"></div>
+        <div class="hero-slide" style="background-image: url('images/BA3.webp')"></div>
+      </div>
+
+      <div class="hero-content-wrapper">
+        <h1 id="hero-title">ثبات نقدي ونمو اقتصادي</h1>
+        <p>البوابة الرسمية لبنك الجزائر. مؤشرات نقدية، نشرات رسمية وخدمات إلكترونية.</p>
+
+        <div class="stats" role="list" aria-label="المؤشرات الاقتصادية الرئيسية">
+          <div class="stat" role="listitem">
+            <div class="n" id="inflation" data-target="1.8" aria-live="polite">0%</div>
+            <div class="l">معدل التضخم (شهري)</div>
+          </div>
+          <div class="stat" role="listitem">
+            <div class="n" id="reserves" data-target="39.2" aria-live="polite">0B</div>
+            <div class="l">احتياطي العملات الصعبة</div>
+          </div>
+          <div class="stat" role="listitem">
+            <div class="n" id="policyRate" data-target="6.50" aria-live="polite">0%</div>
+            <div class="l">سعر السياسة النقدية</div>
+          </div>
+        </div>
+      </div> <!-- End hero-content-wrapper -->
+
+      <div class="hero-controls" aria-label="التحكم في الشرائح">
+        <button class="hero-nav hero-prev" type="button" aria-label="السابق">‹</button>
+        <div class="hero-dots">
+          <button class="hero-dot active" data-slide="0" aria-label="شريحة 1"></button>
+          <button class="hero-dot" data-slide="1" aria-label="شريحة 2"></button>
+          <button class="hero-dot" data-slide="2" aria-label="شريحة 3"></button>
+      </div>
+        <button class="hero-nav hero-next" type="button" aria-label="التالي">›</button>
+      </div>
+      <div class="hero-progress" aria-hidden="true"><span></span></div>
+
+      <aside class="card" aria-label="معدلات الصرف السريعة">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+          <strong>معدل الصرف</strong>
+          <small style="color:var(--muted)">تحديث مباشر</small>
+        </div>
+
+        <div class="exchange" role="list" aria-label="أسعار العملات">
+          <div class="pair" role="listitem">
+            <div class="sym">EUR / DZD</div>
+            <div class="val" id="eur" data-base="163.50" aria-live="polite">≈ 163.50 دج</div>
+          </div>
+          <div class="pair" role="listitem">
+            <div class="sym">USD / DZD</div>
+            <div class="val" id="usd" data-base="150.20" aria-live="polite">≈ 150.20 دج</div>
+          </div>
+          <div class="pair" role="listitem">
+            <div class="sym">GBP / DZD</div>
+            <div class="val" id="gbp" data-base="187.40" aria-live="polite">≈ 187.40 دج</div>
+          </div>
+        </div>
+
+        <div style="margin-top:12px;display:flex;gap:8px">
+          <button class="btn-primary" onclick="showToast('سيتم توجيهك إلى صفحة النشرات الرسمية')">
+            <span style="position:relative;z-index:1">النشرات الرسمية</span>
+          </button>
+          <button class="btn-secondary" onclick="showToast('سيتم توجيهك إلى صفحة الخدمات الإلكترونية')">الخدمات</button>
+        </div>
+      </aside>
+    </section>
+
+    <div class="ticker" aria-label="شريط مؤشرات السوق">
+      <div class="ticker-track">
+        <div class="ticker-item">سعر السياسة <span>6.50%</span></div>
+        <div class="ticker-item">EUR/DZD <span id="ticker-eur">163.50</span></div>
+        <div class="ticker-item">USD/DZD <span id="ticker-usd">150.20</span></div>
+        <div class="ticker-item">GBP/DZD <span id="ticker-gbp">187.40</span></div>
+        <div class="ticker-item">تضخم شهري <span id="ticker-cpi">1.8%</span></div>
+        <div class="ticker-item">احتياطي عملات <span id="ticker-res">39.2B</span></div>
+      </div>
+    </div>
+
+    <main id="main-content">
+      <section>
+        <h2 style="margin-top:0;margin-bottom:10px" id="services-title">خدمات ومهمات البنك</h2>
+
+        <div class="kpi-grid" aria-label="مؤشرات رئيسية" id="stats">
+          <div class="kpi-card">
+            <div class="label">معدل الفائدة الرئيسي</div>
+            <div class="value" id="kpi-rate">6.50%</div>
+            <div class="kpi-bar"><span id="kpi-bar-rate" style="width:72%"></span></div>
+          </div>
+          <div class="kpi-card">
+            <div class="label">التضخم السنوي</div>
+            <div class="value" id="kpi-cpi">+3.2%</div>
+            <div class="kpi-bar"><span id="kpi-bar-cpi" style="width:48%"></span></div>
+          </div>
+          <div class="kpi-card">
+            <div class="label">احتياطي العملات الصعبة</div>
+            <div class="value" id="kpi-res">39.2 مليار $</div>
+            <div class="kpi-bar"><span id="kpi-bar-res" style="width:86%"></span></div>
+          </div>
+          <div class="kpi-card">
+            <div class="label">نمو الكتلة النقدية M2</div>
+            <div class="value" id="kpi-m2">+4.1%</div>
+            <div class="kpi-bar"><span id="kpi-bar-m2" style="width:58%"></span></div>
+          </div>
+        </div>
+
+        <div class="cta-grid" id="policy" aria-label="روابط سريعة">
+          <div class="cta-card">
+            <div class="pill-badge">السياسة النقدية</div>
+            <h3>إجراءات واستهدافات</h3>
+            <p>تحديثات الفائدة وأدوات السوق.</p>
+          </div>
+          <div class="cta-card" id="fx">
+            <div class="pill-badge">سوق الصرف</div>
+            <h3>العمليات والصلاحيات</h3>
+            <p>تنظيم سوق النقد وتعليمات الصرف.</p>
+          </div>
+          <div class="cta-card" id="publications">
+            <div class="pill-badge">النشرات الرسمية</div>
+            <h3>تقارير وبيانات</h3>
+            <p>بيانات التضخم وتقارير الاستقرار.</p>
+          </div>
+          <div class="cta-card" id="currency">
+            <div class="pill-badge">العملات والأوراق</div>
+            <h3>التصاميم والأمان</h3>
+            <p>فئات الدينار وخصائص الحماية.</p>
+          </div>
+        </div>
+
+        <section style="margin-top:16px" id="charts">
+          <h2>لوحة الرسوم البيانية</h2>
+          <div class="charts-grid">
+            <div class="chart-card">
+              <div class="chart-header">
+                <div>اتجاه التضخم</div>
+                <small>آخر 6 أشهر</small>
+              </div>
+              <canvas id="chart-cpi-line" class="chart-canvas" aria-label="رسم بياني للتضخم"></canvas>
+              <div class="chart-legend">
+                <div class="legend-item"><span class="legend-dot" style="background:var(--accent)"></span> التضخم الشهري</div>
+                <div class="legend-item"><span class="legend-dot" style="background:var(--primary)"></span> المتوسط المتحرك</div>
+              </div>
+            </div>
+
+            <div class="chart-card">
+              <div class="chart-header">
+                <div>احتياطي العملات الصعبة</div>
+                <small>مليار دولار</small>
+              </div>
+              <canvas id="chart-reserves" class="chart-canvas" aria-label="رسم بياني للاحتياطيات"></canvas>
+              <div class="chart-legend">
+                <div class="legend-item"><span class="legend-dot" style="background:var(--accent)"></span> الاحتياطي</div>
+              </div>
+            </div>
+
+            <div class="chart-card">
+              <div class="chart-header">
+                <div>سعر الصرف EUR/DZD</div>
+                <small>آخر 7 أيام</small>
+              </div>
+              <canvas id="chart-fx" class="chart-canvas" aria-label="رسم بياني لسعر الصرف"></canvas>
+              <div class="chart-legend">
+                <div class="legend-item"><span class="legend-dot" style="background:var(--accent)"></span> سعر الإغلاق</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="services" role="list" aria-labelledby="services-title">
+          <div class="service" role="listitem" tabindex="0">
+            <h3>السياسة النقدية</h3>
+            <p>ضبط الفائدة واستقرار الأسعار.</p>
+          </div>
+
+          <div class="service" role="listitem" tabindex="0">
+            <h3>إدارة الاحتياطيات</h3>
+            <p>حفظ العملات وإدارة الاستثمارات.</p>
+          </div>
+
+          <div class="service" role="listitem" tabindex="0">
+            <h3>نظام الدفع</h3>
+            <p>تسهيل التحويلات بين البنوك.</p>
+          </div>
+
+          <div class="service" role="listitem" tabindex="0">
+            <h3>تنظيم البنوك</h3>
+            <p>مراقبة النظام المصرفي وحماية المودعين.</p>
+          </div>
+        </div>
+
+        <section style="margin-top:18px">
+          <h2 id="news-title">أحدث الأخبار</h2>
+          <div class="news-container">
+            <div class="news-items" id="newsCarousel" role="list" aria-labelledby="news-title">
+              <article class="news-item" role="listitem" onclick="showNewsModal(0)" tabindex="0" onkeypress="handleKeyPress(event, 0)">
+                <img src="https://via.placeholder.com/160x120.png?text=خبر+1" alt="نشرة اقتصادية شهرية" loading="lazy">
+            <div>
+            <h4>نشرة اقتصادية شهرية</h4>
+                <p>ملخص المؤشرات الاقتصادية للشهر الماضي.</p>
+            </div>
+              </article>
+
+              <article class="news-item" role="listitem" onclick="showNewsModal(1)" tabindex="0" onkeypress="handleKeyPress(event, 1)">
+                <img src="https://via.placeholder.com/160x120.png?text=خبر+2" alt="تقرير استقرار السيولة" loading="lazy">
+            <div>
+            <h4>تقرير استقرار السيولة</h4>
+            <p>تدابير لضمان التمويل قصير الأجل.</p>
+                </div>
+              </article>
+              
+              <article class="news-item" role="listitem" onclick="showNewsModal(2)" tabindex="0" onkeypress="handleKeyPress(event, 2)">
+                <img src="https://via.placeholder.com/160x120.png?text=خبر+3" alt="تحديثات السياسة النقدية" loading="lazy">
+                <div>
+                <h4>تحديثات السياسة النقدية</h4>
+                <p>تطورات وإجراءات لدعم الاقتصاد.</p>
+                </div>
+              </article>
+            </div>
+            <div class="carousel-controls" role="group" aria-label="عناصر التحكم في عرض الأخبار">
+              <button class="carousel-dot active" aria-label="الخبر 1" onclick="goToSlide(0)"></button>
+              <button class="carousel-dot" aria-label="الخبر 2" onclick="goToSlide(1)"></button>
+              <button class="carousel-dot" aria-label="الخبر 3" onclick="goToSlide(2)"></button>
+            </div>
+          </div>
+        </section>
+
+        <section style="margin-top:18px" id="media">
+          <h2>الفعاليات القادمة</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-bullet"></div>
+              <div class="timeline-card">
+                <small>15 يناير 2026</small>
+                <h4>ندوة السياسة النقدية</h4>
+                <p>نقاش التوقعات للربع الأول.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-bullet"></div>
+              <div class="timeline-card">
+                <small>02 فبراير 2026</small>
+                <h4>تقرير الاستقرار المالي</h4>
+                <p>عرض المؤشرات السنوية.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-bullet"></div>
+              <div class="timeline-card">
+                <small>20 فبراير 2026</small>
+                <h4>إحاطة سوق الصرف</h4>
+                <p>تطورات السوق والتنسيق البنكي.</p>
+              </div>
+            </div>
+          </div>
+      </section>
+
+        <section style="margin-top:18px" id="about">
+          <h2>شركاؤنا ومؤسساتنا</h2>
+          <div class="partners">
+            <div class="partner">وزارة المالية</div>
+            <div class="partner">الجمارك الجزائرية</div>
+            <div class="partner">البنوك التجارية</div>
+            <div class="partner">هيئة السوق المالية</div>
+            <div class="partner">الخزينة العمومية</div>
+            <div class="partner">بورصة الجزائر</div>
+          </div>
+        </section>
+
+      </section>
+
+      <aside role="complementary" aria-label="معلومات إضافية">
+        <div class="widget card">
+          <strong>بحث سريع</strong>
+          <form style="margin-top:10px;display:flex;gap:8px" onsubmit="handleSearch(event)" role="search">
+            <input id="q" type="search" placeholder="ابحث عن نشرة أو بيان" aria-label="حقل البحث" autocomplete="off">
+            <button type="submit" class="btn-primary" style="padding:10px 20px" aria-label="إجراء البحث">
+              <span id="searchBtnText" style="position:relative;z-index:1">بحث</span>
+            </button>
+          </form>
+          <div id="searchSuggestions" style="margin-top:8px;display:none">
+            <small style="color:var(--muted)">اقتراحات:</small>
+            <div style="margin-top:4px;display:flex;flex-direction:column;gap:4px" role="listbox">
+              <button class="btn-secondary" style="text-align:right;padding:8px" onclick="fillSearch('تقرير التضخم')" role="option">تقرير التضخم</button>
+              <button class="btn-secondary" style="text-align:right;padding:8px" onclick="fillSearch('احتياطيات النقد')" role="option">احتياطيات النقد</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="widget card">
+          <strong>التقويم المالي</strong>
+          <p style="color:var(--muted);margin:8px 0 0 0;font-size:13px">تواريخ النشرات القادمة</p>
+          <ul style="padding-right:18px;color:var(--muted);margin-top:8px;list-style:none">
+            <li style="padding:6px 0;border-bottom:1px solid var(--glass-2)">15 ديسمبر — تقرير التضخم</li>
+            <li style="padding:6px 0">01 يناير — تقرير الاحتياطيات</li>
+          </ul>
+        </div>
+
+        <div class="widget card">
+          <strong>تواصل سريع</strong>
+          <p style="color:var(--muted);font-size:13px;margin-top:8px">العنوان: الجزائر العاصمة<br>هاتف: <a href="tel:+213210000000" style="color:var(--accent);text-decoration:none">+213 21 000 000</a></p>
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <button class="btn-secondary" onclick="showToast('سيتم فتح نموذج الاتصال')" aria-label="مراسلة البنك">راسلنا</button>
+            <button class="btn-primary" onclick="showToast('سيتم فتح خريطة الموقع')" aria-label="عرض الموقع على الخريطة">الموقع</button>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer role="contentinfo">
+      <div>بنك الجزائر المركزي — واجهة معلوماتية رسمية</div>
+      <div style="margin-top:6px;color:var(--muted)">© 2025 بنك الجزائر المركزي — جميع الحقوق محفوظة</div>
+    </footer>
+  </div>
+
+  <!-- Toast notification -->
+  <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+  <!-- Modal for news details -->
+  <div id="newsModal" class="modal-overlay" onclick="closeModal(event)" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h3 id="modal-title" style="margin:0">تفاصيل الخبر</h3>
+        <button class="modal-close" onclick="closeModal()" aria-label="إغلاق">&times;</button>
+      </div>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script>
+    // Enhanced animated counters for statistics
+    function animateCounter(element, target, suffix = '%', prefix = '') {
+      const duration = 2000;
+      const start = 0;
+      const startTime = performance.now();
+      
+      function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        // Easing function
+        const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+        const current = start + (target - start) * easeOutQuart;
+        
+        element.textContent = prefix + current.toFixed(2) + suffix;
+        
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        }
+      }
+      
+      requestAnimationFrame(update);
+    }
+
+    // Lightweight chart renderer (canvas)
+    const chartConfigs = [
+      {
+        id: 'chart-cpi-line',
+        series: [
+          { data: [1.9, 2.1, 2.0, 1.8, 1.7, 1.9], color: getComputedStyle(document.documentElement).getPropertyValue('--accent').trim(), fill: true },
+          { data: [1.9, 2.0, 1.95, 1.9, 1.85, 1.9], color: getComputedStyle(document.documentElement).getPropertyValue('--primary').trim(), fill: false }
+        ],
+        labels: ['شهر 1','شهر 2','شهر 3','شهر 4','شهر 5','شهر 6']
+      },
+      {
+        id: 'chart-reserves',
+        series: [
+          { data: [38.2, 38.7, 39.0, 39.4, 39.1, 39.2], color: getComputedStyle(document.documentElement).getPropertyValue('--accent').trim(), fill: true }
+        ],
+        labels: ['فبر','مارس','أبريل','ماي','يونيو','يوليو']
+      },
+      {
+        id: 'chart-fx',
+        series: [
+          { data: [162.8, 163.1, 162.9, 163.5, 163.2, 163.8, 163.4], color: getComputedStyle(document.documentElement).getPropertyValue('--accent').trim(), fill: true }
+        ],
+        labels: ['يوم 1','يوم 2','يوم 3','يوم 4','يوم 5','يوم 6','يوم 7']
+      }
+    ];
+
+    function drawLineChart(canvas, config) {
+      const dpr = window.devicePixelRatio || 1;
+      const width = canvas.clientWidth * dpr;
+      const height = canvas.clientHeight * dpr;
+      canvas.width = width;
+      canvas.height = height;
+      const ctx = canvas.getContext('2d');
+      ctx.clearRect(0,0,width,height);
+
+      const padding = 28 * dpr;
+      const innerW = width - padding * 2;
+      const innerH = height - padding * 1.4;
+
+      // compute min/max
+      let min = Infinity, max = -Infinity;
+      config.series.forEach(s => {
+        s.data.forEach(v => { if(v<min) min=v; if(v>max) max=v; });
+      });
+      if (min === max) { min -= 1; max += 1; }
+
+      // grid lines
+      ctx.strokeStyle = 'rgba(0,19,69,0.08)';
+      ctx.lineWidth = 1;
+      const gridLines = 4;
+      for(let i=0;i<=gridLines;i++){
+        const y = padding + (innerH / gridLines) * i;
+        ctx.beginPath();
+        ctx.moveTo(padding, y);
+        ctx.lineTo(padding + innerW, y);
+        ctx.stroke();
+      }
+
+      // helper to map point
+      const mapPoint = (val, idx, total) => {
+        const x = padding + (innerW/(total-1)) * idx;
+        const norm = (val - min) / (max - min);
+        const y = padding + innerH - norm * innerH;
+        return {x,y};
+      };
+
+      config.series.forEach(s => {
+        ctx.lineWidth = 2 * dpr;
+        ctx.strokeStyle = s.color;
+
+        const pts = s.data.map((v,i)=> mapPoint(v,i,s.data.length));
+
+        if (s.fill){
+          const gradient = ctx.createLinearGradient(0,padding,0,padding+innerH);
+          gradient.addColorStop(0, s.color + 'dd');
+          gradient.addColorStop(1, s.color + '00');
+          ctx.beginPath();
+          pts.forEach((p,i)=> { if(i===0) ctx.moveTo(p.x,p.y); else ctx.lineTo(p.x,p.y); });
+          ctx.lineTo(pts[pts.length-1].x, padding+innerH);
+          ctx.lineTo(pts[0].x, padding+innerH);
+          ctx.closePath();
+          ctx.fillStyle = gradient;
+          ctx.fill();
+        }
+
+        ctx.beginPath();
+        pts.forEach((p,i)=> { if(i===0) ctx.moveTo(p.x,p.y); else ctx.lineTo(p.x,p.y); });
+        ctx.stroke();
+
+        // dots
+        pts.forEach(p=>{
+          ctx.beginPath();
+          ctx.fillStyle = '#fff';
+          ctx.arc(p.x,p.y,3.5*dpr,0,Math.PI*2);
+          ctx.fill();
+          ctx.beginPath();
+          ctx.fillStyle = s.color;
+          ctx.arc(p.x,p.y,2.5*dpr,0,Math.PI*2);
+          ctx.fill();
+        });
+      });
+    }
+
+    function renderCharts() {
+      chartConfigs.forEach(cfg => {
+        const canvas = document.getElementById(cfg.id);
+        if (!canvas) return;
+        drawLineChart(canvas, cfg);
+      });
+    }
+
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(renderCharts, 200);
+    });
+
+    // Animate statistics on page load
+    window.addEventListener('load', () => {
+      animateCounter(document.getElementById('inflation'), 1.8, '%', '+');
+      animateCounter(document.getElementById('reserves'), 39.2, 'B', 'USD ');
+      animateCounter(document.getElementById('policyRate'), 6.5, '%', '');
+      document.getElementById('ticker-cpi').textContent = '1.8%';
+      document.getElementById('ticker-res').textContent = '39.2B';
+      // animate KPI bars
+      setTimeout(() => {
+        document.querySelectorAll('.kpi-bar span').forEach(bar => {
+          const currentWidth = bar.style.width || '70%';
+          bar.style.width = currentWidth;
+        });
+      }, 200);
+      renderCharts();
+    });
+
+    // Enhanced exchange rate updates with animation
+    function updateExchangeRates() {
+      const rates = [
+        { id: 'eur', base: 163.5, range: 2.2 },
+        { id: 'usd', base: 150.2, range: 2.5 },
+        { id: 'gbp', base: 187.4, range: 3.0 }
+      ];
+      
+      rates.forEach(rate => {
+        const element = document.getElementById(rate.id);
+      const sign = Math.random() < 0.5 ? -1 : 1;
+        const newVal = rate.base + sign * Math.random() * rate.range;
+        
+        element.style.transition = 'color 0.3s ease';
+        element.style.color = 'var(--accent)';
+        
+        setTimeout(() => {
+          element.textContent = '≈ ' + newVal.toFixed(2) + ' دج';
+          setTimeout(() => {
+            element.style.color = '';
+          }, 300);
+        }, 150);
+        
+        // update ticker mirror
+        if(rate.id === 'eur') document.getElementById('ticker-eur').textContent = newVal.toFixed(2);
+        if(rate.id === 'usd') document.getElementById('ticker-usd').textContent = newVal.toFixed(2);
+        if(rate.id === 'gbp') document.getElementById('ticker-gbp').textContent = newVal.toFixed(2);
+      });
+    }
+
+    // Update rates every 5 seconds
+    setInterval(updateExchangeRates, 5000);
+
+    // Sticky header on scroll
+    let lastScroll = 0;
+    const header = document.querySelector('header');
+    
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      
+      if (currentScroll > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+      
+      lastScroll = currentScroll;
+    });
+
+    // Mobile menu toggle
+    function toggleMenu() {
+      const nav = document.getElementById('mainNav');
+      const btn = document.querySelector('.mobile-menu-btn');
+      const isOpen = nav.classList.toggle('open');
+      
+      btn.setAttribute('aria-expanded', isOpen);
+      btn.setAttribute('aria-label', isOpen ? 'إغلاق القائمة' : 'فتح القائمة');
+      btn.textContent = isOpen ? '✕' : '☰';
+    }
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        const nav = document.getElementById('mainNav');
+        if (nav.classList.contains('open')) {
+          toggleMenu();
+        }
+      });
+    });
+
+    // Toast notification system
+    function showToast(message, duration = 3000) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.classList.add('show');
+      
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, duration);
+    }
+
+    // News carousel
+    let currentSlide = 0;
+    const totalSlides = 3;
+
+    function goToSlide(index) {
+      currentSlide = index;
+      const carousel = document.getElementById('newsCarousel');
+      carousel.style.transform = `translateX(${index * 100}%)`;
+      
+      // Update dots
+      document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+        dot.setAttribute('aria-current', i === index ? 'true' : 'false');
+      });
+    }
+
+    // Auto-advance carousel
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      goToSlide(currentSlide);
+    }, 5000);
+
+    // News modal
+    const newsData = [
+      {
+        title: 'نشرة اقتصادية شهرية — ملخص مؤشرات',
+        content: 'يسر بنك الجزائر المركزي أن يقدم ملخصًا شاملاً لأداء المؤشرات الاقتصادية الأساسية خلال الشهر الماضي. تظهر البيانات استقرارًا في معدلات التضخم مع نمو متوازن في الاحتياطيات النقدية.',
+        date: '10 ديسمبر 2025'
+      },
+      {
+        title: 'تقرير عن استقرار السيولة',
+        content: 'أصدر البنك المركزي تقريرًا مفصلاً حول إدارة السيولة في النظام المصرفي. يتضمن التقرير التدابير المتخذة لضمان استمرار التمويل في الأجل القصير ودعم القطاع المصرفي.',
+        date: '05 ديسمبر 2025'
+      },
+      {
+        title: 'تحديثات السياسة النقدية للربع الرابع',
+        content: 'في إطار مراجعة السياسة النقدية الفصلية، أعلن البنك المركزي عن مجموعة من الإجراءات الهادفة لدعم النمو الاقتصادي مع الحفاظ على استقرار الأسعار.',
+        date: '01 ديسمبر 2025'
+      }
+    ];
+
+    function showNewsModal(index) {
+      const modal = document.getElementById('newsModal');
+      const content = document.getElementById('modalContent');
+      const news = newsData[index];
+      
+      content.innerHTML = `
+        <p style="color:var(--muted);font-size:13px;margin-bottom:12px">${news.date}</p>
+        <h4 style="margin-bottom:12px;color:var(--accent)">${news.title}</h4>
+        <p style="line-height:1.6;color:var(--muted)">${news.content}</p>
+        <div style="margin-top:20px">
+          <button class="btn-primary" style="width:100%" onclick="showToast('سيتم تحميل التقرير الكامل')">
+            تحميل التقرير الكامل
+          </button>
+        </div>
+      `;
+      
+      modal.classList.add('show');
+      document.getElementById('modal-title').focus();
+    }
+
+    function closeModal(event) {
+      if (!event || event.target.classList.contains('modal-overlay') || event.target.classList.contains('modal-close')) {
+        document.getElementById('newsModal').classList.remove('show');
+      }
+    }
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeModal();
+        const nav = document.getElementById('mainNav');
+        if (nav.classList.contains('open')) {
+          toggleMenu();
+        }
+      }
+    });
+
+    // Handle keyboard navigation for news items
+    function handleKeyPress(event, index) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        showNewsModal(index);
+      }
+    }
+
+    // Search functionality with suggestions
+    const searchInput = document.getElementById('q');
+    const searchSuggestions = document.getElementById('searchSuggestions');
+
+    searchInput.addEventListener('input', (e) => {
+      if (e.target.value.length > 0) {
+        searchSuggestions.style.display = 'block';
+      } else {
+        searchSuggestions.style.display = 'none';
+      }
+    });
+
+    searchInput.addEventListener('focus', (e) => {
+      if (e.target.value.length > 0) {
+        searchSuggestions.style.display = 'block';
+      }
+    });
+
+    function fillSearch(text) {
+      searchInput.value = text;
+      searchSuggestions.style.display = 'none';
+      searchInput.focus();
+    }
+
+    function handleSearch(event) {
+      event.preventDefault();
+      const query = searchInput.value.trim();
+      const searchBtn = document.getElementById('searchBtnText');
+      
+      if (!query) {
+        showToast('الرجاء إدخال كلمة للبحث');
+        return;
+      }
+      
+      // Show loading state
+      searchBtn.innerHTML = '<span class="spinner"></span>';
+      
+      // Simulate search
+      setTimeout(() => {
+        searchBtn.textContent = 'بحث';
+        showToast(`نتائج البحث عن: "${query}" - تم العثور على 5 نتائج`);
+        searchSuggestions.style.display = 'none';
+      }, 1000);
+    }
+
+    // Smooth scroll for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && document.querySelector(href)) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add active state to navigation based on scroll position
+    const sections = document.querySelectorAll('section[id], main');
+    const navLinks = document.querySelectorAll('nav a');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        link.removeAttribute('aria-current');
+        if (link.getAttribute('href').substring(1) === current) {
+          link.classList.add('active');
+          link.setAttribute('aria-current', 'page');
+        }
+      });
+    });
+
+    // Service cards keyboard navigation
+    document.querySelectorAll('.service').forEach(service => {
+      service.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          showToast('سيتم توجيهك إلى صفحة ' + service.querySelector('h3').textContent);
+        }
+      });
+    });
+
+    // Add ripple effect to buttons
+    document.querySelectorAll('button, .btn').forEach(button => {
+      button.addEventListener('click', function(e) {
+        const ripple = document.createElement('span');
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top - size / 2;
+        
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        ripple.style.position = 'absolute';
+        ripple.style.borderRadius = '50%';
+        ripple.style.background = 'rgba(255,255,255,0.5)';
+        ripple.style.transform = 'scale(0)';
+        ripple.style.animation = 'ripple 0.6s ease-out';
+        ripple.style.pointerEvents = 'none';
+        
+        this.appendChild(ripple);
+        
+        setTimeout(() => ripple.remove(), 600);
+      });
+    });
+
+    // Add ripple animation to CSS dynamically
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes ripple {
+        to {
+          transform: scale(2);
+          opacity: 0;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+
+    // Performance: Lazy load images on intersection
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+            }
+            imageObserver.unobserve(img);
+          }
+        });
+      });
+
+      document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
+      });
+    }
+
+    // Page load complete message
+    window.addEventListener('load', () => {
+      console.log('✅ بنك الجزائر المركزي - الصفحة محملة بالكامل');
+      initHeroSlider();
+    });
+
+    // Hero Slider Logic - with controls, dots, pause on hover, and progress
+    function initHeroSlider() {
+      const slides = document.querySelectorAll('.hero-slide');
+      const dots = document.querySelectorAll('.hero-dot');
+      const prevBtn = document.querySelector('.hero-prev');
+      const nextBtn = document.querySelector('.hero-next');
+      const progress = document.querySelector('.hero-progress span');
+      const hero = document.querySelector('.hero');
+
+      if (!slides.length || !progress) return;
+
+      let current = 0;
+      const interval = 6500;
+      let timer;
+
+      const setActive = (index) => {
+        slides.forEach(s => s.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+        slides[index].classList.add('active');
+        if (dots[index]) dots[index].classList.add('active');
+        animateProgress();
+      };
+
+      const animateProgress = () => {
+        progress.style.transition = 'none';
+        progress.style.width = '0%';
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            progress.style.transition = `width ${interval}ms linear`;
+            progress.style.width = '100%';
+          });
+        });
+      };
+
+      const next = () => {
+        current = (current + 1) % slides.length;
+        setActive(current);
+      };
+
+      const prev = () => {
+        current = (current - 1 + slides.length) % slides.length;
+        setActive(current);
+      };
+
+      const start = () => {
+        clearInterval(timer);
+        timer = setInterval(next, interval);
+        animateProgress();
+      };
+
+      const stop = () => clearInterval(timer);
+
+      // Init state
+      setActive(current);
+      start();
+
+      // Buttons
+      if (nextBtn) nextBtn.addEventListener('click', () => { next(); start(); });
+      if (prevBtn) prevBtn.addEventListener('click', () => { prev(); start(); });
+
+      // Dots
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          const idx = Number(dot.dataset.slide || 0);
+          current = idx;
+          setActive(current);
+          start();
+        });
+      });
+
+      // === TOUCH SUPPORT FOR MOBILE ===
+      let touchStartX = 0;
+      let touchEndX = 0;
+      let touchStartY = 0;
+      let touchEndY = 0;
+      const minSwipeDistance = 60;
+
+      const handleTouchStart = (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+        touchStartY = e.changedTouches[0].screenY;
+      };
+
+      const handleTouchEnd = (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        touchEndY = e.changedTouches[0].screenY;
+        
+        const deltaX = touchEndX - touchStartX;
+        const deltaY = touchEndY - touchStartY;
+        
+        // Only horizontal swipe (avoid conflict with vertical scroll)
+        if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > minSwipeDistance) {
+          if (deltaX > 0) {
+            // Swipe right (RTL: next)
+            next();
+          } else {
+            // Swipe left (RTL: prev)
+            prev();
+          }
+          start(); // Restart timer after swipe
+        }
+      };
+
+      // Attach touch events
+      if (hero) {
+        hero.addEventListener('touchstart', handleTouchStart, { passive: true });
+        hero.addEventListener('touchend', handleTouchEnd, { passive: true });
+      }
+    }
+  </script>
+</body>
+</html>

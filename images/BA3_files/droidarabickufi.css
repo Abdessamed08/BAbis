@@ -1,0 +1,23 @@
+/*
+ * Droid Arabic Kufi (Arabic) http://www.google.com/fonts/earlyaccess
+ */
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://www.bank-of-algeria.dz/wp-content/uploads/elementor/google-fonts/fonts/droidarabickufi-droidkufi-regular.eot);
+  src: url(https://www.bank-of-algeria.dz/wp-content/uploads/elementor/google-fonts/fonts/droidarabickufi-droidkufi-regular.eot?#iefix) format('embedded-opentype'),
+       url(https://www.bank-of-algeria.dz/wp-content/uploads/elementor/google-fonts/fonts/droidarabickufi-droidkufi-regular.woff2) format('woff2'),
+       url(https://www.bank-of-algeria.dz/wp-content/uploads/elementor/google-fonts/fonts/droidarabickufi-droidkufi-regular.woff) format('woff'),
+       url(https://www.bank-of-algeria.dz/wp-content/uploads/elementor/google-fonts/fonts/droidarabickufi-droidkufi-regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://www.bank-of-algeria.dz/wp-content/uploads/elementor/google-fonts/fonts/droidarabickufi-droidkufi-bold.eot);
+  src: url(https://www.bank-of-algeria.dz/wp-content/uploads/elementor/google-fonts/fonts/droidarabickufi-droidkufi-bold.eot?#iefix) format('embedded-opentype'),
+       url(https://www.bank-of-algeria.dz/wp-content/uploads/elementor/google-fonts/fonts/droidarabickufi-droidkufi-bold.woff2) format('woff2'),
+       url(https://www.bank-of-algeria.dz/wp-content/uploads/elementor/google-fonts/fonts/droidarabickufi-droidkufi-bold.woff) format('woff'),
+       url(https://www.bank-of-algeria.dz/wp-content/uploads/elementor/google-fonts/fonts/droidarabickufi-droidkufi-bold.ttf) format('truetype');
+}
